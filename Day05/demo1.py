@@ -26,4 +26,4 @@ def save_data(items):
 if __name__ == '__main__':
     url = "https://www.forbeschina.com/lists/1733"
     items = get_data(url)
-    save_data(items)
+    save_data(items) 
