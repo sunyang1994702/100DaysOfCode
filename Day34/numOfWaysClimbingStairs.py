@@ -33,6 +33,17 @@ def numOfWaysClimbingStairs_DP(n):
     return first
 
 
+## The clear logic of Dynamic Programming. 
+def DP(n):
+    if n > 1:
+        DP = [1]*(n+1)
+        for i in range(n-2, -1, -1):
+            DP[i] = DP[i+1] + DP[i+2] ## Core Idea. Find out previous stored value.
+        return DP[0]
+    else:
+        return 1
+
+
 if __name__ == '__main__':
     numOfWaysClimbingStairs_BF(10)
     numOfWaysClimbingStairs_DP(10)
